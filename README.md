@@ -1,7 +1,7 @@
 pinoccio-bridge
 ===============
 
-use a field scout with pinoccio hq. 
+use a field scout with pinoccio hq.
 
 plug on scout into your computer and control your whole troop without a wifi backpack
 
@@ -10,13 +10,12 @@ plug on scout into your computer and control your whole troop without a wifi bac
 
 var bridge = require('pinoccio-bridge');
 
-// bridge: 
+// bridge:
 // args
 //   the com port
-//   optional options to pass through to https://github.com/soldair/pinoccio-server/blob/master/bridge.js#L12
 //   ready callback
 
-bridge('/dev/ttyACM0',{host:'localhost'},function(err,b){
+bridge('/dev/ttyACM0',function(err,b){
 
 
   if(err) console.error(err);
@@ -40,4 +39,3 @@ bridge('/dev/ttyACM0',{host:'localhost'},function(err,b){
 
 
 ```
-

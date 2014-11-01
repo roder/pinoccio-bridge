@@ -1,7 +1,7 @@
 var bridge = require('./');
 
 
-bridge('/dev/ttyACM1',{host:'localhost'},function(err,d){
+bridge('/dev/tty.usbmodem411',function(err,d){
 
   if(err) console.error(err);
   if(!d) throw new Error("could not connect to scout for some reason. is something else connecting via serial? or is it a different com port?")
@@ -15,9 +15,3 @@ bridge('/dev/ttyACM1',{host:'localhost'},function(err,d){
 }).on('data',function(data){
   console.log('event stream>',data);
 });
-
-
-
-
-
-
